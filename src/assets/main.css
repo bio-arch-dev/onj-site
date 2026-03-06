@@ -6,8 +6,10 @@
   src: url('@/assets/fonts/KIMM_Bold.ttf') format('truetype');
   font-weight: bold;
 }
-
-/* Tailwind에서 쓸 수 있도록 클래스 연결 (v4 기준) */
+:root {
+  /* 불러온 SUIT 폰트를 전체 기본 폰트로 지정 */
+  font-family: 'SUIT Variable', sans-serif;
+}
 .font-kimm {
   font-family: 'KIMM_Bold', sans-serif;
 }

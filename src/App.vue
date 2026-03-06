@@ -9,7 +9,7 @@
         <RouterView />
       </main>
 
-      <!-- <TheFooter /> -->
+      <TheFooter />
     </div>
 
     <div class="drawer-side z-60">
@@ -27,7 +27,7 @@
 import { RouterView } from 'vue-router'
 import TheHeader from '@/layout/TheHeader.vue'
 import TheDrawer from '@/layout/TheDrawer.vue'
-// import TheFooter from '@/layout/TheFooter.vue'
+import TheFooter from '@/layout/TheFooter.vue'
 </script>
 
 <style>

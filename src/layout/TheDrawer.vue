@@ -5,7 +5,7 @@
     <li v-for="menu in MENU_ITEMS" :key="menu.id">
       <a
         :href="menu.id"
-        class="font-kimm text-sm text-gray-400 transition-colors duration-300 hover:bg-transparent hover:text-black"
+        class="font-kimm text-sm text-gray-400 transition-colors duration-300 hover:bg-transparent hover:text-[#943939]"
       >
         <span class="text-xs opacity-50">{{ menu.num }}</span>
         {{ menu.title }}

@@ -1,22 +1,36 @@
 <template>
   <header
-    class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md"
+    :class="[
+      'fixed top-0 z-50 w-full px-5 transition-all duration-100',
+      isScrolled ? 'bg-white shadow-md' : 'bg-transparent',
+    ]"
   >
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
       <div class="flex items-center gap-8">
-        <h1
+        <div
+          class="group flex cursor-pointer items-center gap-3 whitespace-nowrap"
           @click="scrollToTop"
-          class="font-kimm cursor-pointer text-xl font-bold tracking-tight text-gray-400 hover:text-black"
         >
-          온재
-        </h1>
+          <div
+            class="text-gray-400 transition-colors duration-300 group-hover:text-[#943939]"
+          >
+            <OnjLogo />
+          </div>
+          <span
+            class="font-kimm hidden text-[10px] tracking-tighter text-gray-400 opacity-80 md:block"
+          >
+            실내건축 공사업
+          </span>
+        </div>
 
-        <nav class="hidden items-center gap-10 md:flex">
+        <nav
+          class="mg:ml-20 hidden items-center gap-20 whitespace-nowrap md:flex"
+        >
           <a
             v-for="menu in MENU_ITEMS"
             :key="menu.id"
             :href="menu.id"
-            class="text-sm font-medium text-gray-600 transition-colors hover:text-black"
+            class="font-kimm text-sm font-medium text-gray-400 transition-colors hover:text-[#943939]"
           >
             {{ menu.title }}</a
           >
@@ -45,7 +59,22 @@
 </template>
 
 <script setup>
+import OnjLogo from '@/components/OnjLogo.vue'
 import { MENU_ITEMS } from '@/constants.js'
+import { ref, onMounted, onUnmounted } from 'vue'
+// 1. 스크롤 여부를 저장할 변수
+const isScrolled = ref(false)
+
+// 2. 스크롤 감지 함수
+const handleScroll = () => {
+  // 스크롤이 50px 이상 내려가면 true, 아니면 false
+  isScrolled.value = window.scrollY > 50
+}
+
+// 3. 컴포넌트가 나타날 때 이벤트 등록, 사라질 때 제거
+onMounted(() => window.addEventListener('scroll', handleScroll))
+onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
