@@ -29,7 +29,7 @@ onMounted(() => {
 <template>
   <section class="relative w-full bg-white px-5 py-4">
     <div class="relative mx-auto max-w-7xl">
-      <div class="absolute top-5 left-0 md:top-8">
+      <div class="absolute top-2 left-0 md:top-8">
         <span
           class="font-kimm text-sm tracking-widest text-gray-300 md:text-base"
         >
@@ -40,18 +40,20 @@ onMounted(() => {
 
     <div
       ref="onjAppear"
-      class="fade-container mx-auto flex h-auto min-h-[30vh] max-w-5xl flex-col items-center justify-center py-14 md:flex-row md:gap-20 md:py-0"
+      class="fade-container mx-auto flex h-auto min-h-[45vh] max-w-5xl flex-col items-center justify-center py-14 md:flex-row md:gap-32 md:py-0"
     >
       <div class="fade-item on flex flex-col items-center text-center">
-        <div class="mb-3 flex items-center gap-2">
+        <div class="mb-5 flex items-center gap-3">
           <span
-            class="font-sans text-base font-extrabold tracking-[0.4em] text-gray-400"
+            class="font-SUIT text-base font-extrabold tracking-[0.4em] text-[#943939] md:text-3xl"
             >ON :</span
           >
-          <span class="font-sans text-xl font-normal text-gray-400">溫</span>
+          <span class="font-SUIT text-xl font-normal text-gray-400 md:text-3xl"
+            >溫</span
+          >
         </div>
         <p
-          class="font-sans text-[13px] font-light tracking-widest whitespace-nowrap text-gray-500 md:text-sm"
+          class="font-SUIT text-[13px] font-normal tracking-widest whitespace-nowrap text-gray-400 md:text-xl"
         >
           사람을 위한 시스템을 켜다.
         </p>
@@ -62,15 +64,17 @@ onMounted(() => {
       ></div>
 
       <div class="fade-item jae flex flex-col items-center text-center">
-        <div class="mb-3 flex items-center gap-2">
+        <div class="mb-5 flex items-center gap-3">
           <span
-            class="font-sans text-xl font-bold tracking-[0.4em] text-gray-400"
+            class="font-SUIT text-base font-extrabold tracking-[0.4em] text-[#943939] md:text-3xl"
             >JAE :</span
           >
-          <span class="font-sans text-xl font-normal text-gray-400">技</span>
+          <span class="font-SUIT text-xl font-normal text-gray-400 md:text-3xl"
+            >技</span
+          >
         </div>
         <p
-          class="font-sans text-[13px] font-light tracking-widest whitespace-nowrap text-gray-500 md:text-sm"
+          class="font-SUIT text-[13px] font-normal tracking-widest whitespace-nowrap text-gray-400 md:text-xl"
         >
           정교한 기술로 본질을 짓다.
         </p>

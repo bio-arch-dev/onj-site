@@ -1,8 +1,14 @@
 <template>
   <header
     :class="[
-      'fixed top-0 z-50 w-full px-5 transition-all duration-100',
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent',
+      'z-50 w-full px-5 transition-all duration-300',
+      // 모바일: 흰색 배경 고정, 공간을 차지해서 사진을 아래로 밀어냄
+      'sticky top-0 bg-white shadow-sm',
+      // 웹: 사진 위에 겹치도록 설정, 스크롤 전에는 투명하게
+      'md:fixed md:top-0',
+      isScrolled
+        ? 'md:bg-white md:shadow-md'
+        : 'md:bg-transparent md:shadow-none',
     ]"
   >
     <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">

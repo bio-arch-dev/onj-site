@@ -8,8 +8,9 @@ import WorksSection from '@/elements/Works.vue'
 
 <template>
   <TopSection />
+  <AreasSection />
   <CompanySection />
   <CertiSection />
-  <AreasSection />
+
   <WorksSection />
 </template>

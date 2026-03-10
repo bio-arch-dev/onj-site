@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex h-[30vh] w-full items-center justify-center overflow-hidden text-white md:h-screen"
+    class="relative flex h-[40vh] w-full items-center justify-center overflow-hidden text-white md:h-screen"
   >
     <div class="absolute inset-0 z-0 overflow-hidden">
       <img
@@ -13,7 +13,7 @@
 
     <div class="z-10 mx-auto max-w-4xl px-5 text-center">
       <h1
-        class="mb-4 text-3xl font-bold tracking-tight text-white drop-shadow-lg md:text-7xl lg:text-8xl"
+        class="mb-4 text-xl font-bold tracking-[0.2em] text-white drop-shadow-lg md:text-5xl lg:text-6xl"
       >
         SYSTEM, ON.
       </h1>

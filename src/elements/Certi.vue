@@ -1,10 +1,11 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Pagination, Autoplay } from 'swiper/modules'
+import { Pagination, Autoplay, FreeMode } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/free-mode'
 
-const modules = [Pagination, Autoplay]
+const modules = [Pagination, Autoplay, FreeMode]
 
 // Cloudinary URL을 여기에 순서대로 넣어줘
 const certs = [
@@ -40,11 +41,19 @@ const certs = [
     <div class="mx-auto max-w-7xl">
       <swiper
         :modules="modules"
-        :pagination="{ clickable: true }"
-        :autoplay="{ delay: 5000 }"
+        :loop="true"
+        :speed="6000"
+        :autoplay="{
+          delay: 0,
+          disableOnInteraction: false,
+        }"
+        :slidesPerView="2"
+        :spaceBetween="15"
         :breakpoints="{
-          1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 40 },
-          0: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 15 },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
         }"
         class="cert-swiper"
       >
