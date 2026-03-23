@@ -29,7 +29,7 @@ const businessItems = [
 </script>
 
 <template>
-  <section id="works" class="w-full bg-white px-4 py-8 md:py-32">
+  <section id="company" class="w-full bg-white px-4 py-8 md:py-32">
     <div class="mx-auto max-w-6xl">
       <div class="mb-8 flex flex-col items-center text-center md:mb-24">
         <span

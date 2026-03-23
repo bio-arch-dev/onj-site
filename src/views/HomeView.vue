@@ -4,6 +4,8 @@ import CompanySection from '@/elements/Company.vue'
 import CertiSection from '@/elements/Certi.vue'
 import AreasSection from '@/elements/Areas.vue'
 import WorksSection from '@/elements/Works.vue'
+import SnsSection from '@/elements/Sns.vue'
+import Contact from '@/elements/Contact.vue'
 </script>
 
 <template>
@@ -11,6 +13,7 @@ import WorksSection from '@/elements/Works.vue'
   <AreasSection />
   <CompanySection />
   <CertiSection />
-
   <WorksSection />
+  <SnsSection />
+  <Contact />
 </template>

@@ -142,6 +142,22 @@ const projects = [
     comment:
       '북측 전면이 좁고, 남측 후면이 넓어서, 방 3개를 모두 남향으로 배치하고, 북향인 거실은 복층 채광창을 통해 자연광이 풍부하게 들어오도록 했습니다.',
     images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-1_jym3gk.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-3_y4jdnq.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-13_dnahbh.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226979/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-18_ssgy5l.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-15_q9xppm.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226979/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-61_bvwcsl.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-33_ton4rj.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774226978/%EB%9D%BC%EB%B9%8C3%EC%B8%B5_%EC%8B%A4%EB%82%B4%EC%82%AC%EC%A7%84-77_fpidai.jpg',
+    ],
+  },
+  {
+    title: 'PLAYMOM WATERROOM',
+    location: '2022 플레이맘 워터룸',
+    comment:
+      '전국단위 수영장 파티룸 프랜차이즈로 프라이빗하게 공간을 대여하여 지인들과 오붓하게 모임을 할수 있는 공간입니다. 휴양지에 놀러온 듯 한 컨셉과 방수설계, 아이들의 안전을 최우선으로 계획되었습니다.',
+    images: [
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773131495/00047_DSC09944_wfdfhg.jpg',
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773131459/00021_DSC09838_dor64s.jpg',
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773131456/00020_DSC09836_vk4kr6.jpg',
@@ -156,7 +172,7 @@ const projects = [
 </script>
 
 <template>
-  <section class="w-full bg-white px-5 py-12 md:py-32">
+  <section id="works" class="w-full bg-white px-5 py-12 md:py-32">
     <div class="mx-auto max-w-7xl">
       <div
         v-for="(project, pIdx) in projects"

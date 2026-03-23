@@ -36,6 +36,7 @@
             v-for="menu in MENU_ITEMS"
             :key="menu.id"
             :href="menu.id"
+            @click="scrollToSection($event, menu.id)"
             class="font-kimm text-sm font-medium text-gray-400 transition-colors hover:text-[#943939]"
           >
             {{ menu.title }}</a
@@ -86,5 +87,22 @@ const scrollToTop = () => {
     top: 0,
     behavior: 'smooth', // 부드럽게 스크롤 이동
   })
+}
+
+// 메뉴 스크롤 이동 함수
+const scrollToSection = (e, id) => {
+  e.preventDefault() // <a> 태그의 기본 이동 막기
+  const target = document.querySelector(id)
+  if (target) {
+    // 헤더 높이(약 80px)를 고려해 위치 계산
+    const headerOffset = 80
+    const elementPosition = target.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
+  }
 }
 </script>
