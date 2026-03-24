@@ -21,10 +21,10 @@ const snsArchive = {
     label: 'Naver Blog',
     icon: 'forum',
     title: 'thedesign_ena',
-    desc: '',
+    desc: '현장의 진솔한 기록과 공간을 향한 사유',
     link: 'https://blog.naver.com/thedesign_ena/223847085637',
     thumb:
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774241909/2_algz0y.png',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1774311914/2_nt5ph2.png',
   },
 }
 </script>
@@ -77,7 +77,7 @@ const snsArchive = {
               <div
                 class="absolute bottom-6 left-6 text-left md:bottom-12 md:left-12"
               >
-                <h3 class="font-SUIT text-xl font-bold md:text-4xl">
+                <h3 class="font-SUIT text-xl font-bold md:text-2xl">
                   {{ snsArchive.youtube.title }}
                 </h3>
                 <p
@@ -118,7 +118,7 @@ const snsArchive = {
             <div
               class="absolute bottom-4 left-6 text-left md:bottom-10 md:left-10"
             >
-              <h3 class="font-SUIT text-sm font-bold md:text-4xl">
+              <h3 class="font-SUIT text-sm font-bold md:text-2xl">
                 {{ snsArchive.instagram.title }}
               </h3>
               <p
@@ -158,7 +158,7 @@ const snsArchive = {
             <div
               class="absolute bottom-4 left-6 text-left md:bottom-10 md:left-10"
             >
-              <h3 class="font-SUIT text-sm font-bold md:text-4xl">
+              <h3 class="font-SUIT text-sm font-bold md:text-2xl">
                 {{ snsArchive.blog.title }}
               </h3>
               <p

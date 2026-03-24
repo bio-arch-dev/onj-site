@@ -1,54 +1,56 @@
 <script setup>
 const processes = [
-  { en: 'CONSULTING', ko: '상담 및 견적 제안' },
-  { en: 'VISIT & SURVEY', ko: '현장 방문 및 정밀 실측' },
-  { en: 'DESIGN & MATERIAL', ko: '맞춤 설계 및 자재 선정' },
-  { en: 'CONSTRUCTION', ko: '정직하고 세밀한 시공' },
+  { en: 'CONSULTING', ko: '전화 상담 및 일정 확인' },
+  { en: 'VISIT', ko: '현장 방문 미팅' },
+  { en: 'DESIGN', ko: '맞춤 설계 및 견적 제안' },
+  { en: 'CONSTRUCTION', ko: '계약서 작성 및 시공' },
 ]
 </script>
 
 <template>
   <section id="contact" class="w-full bg-white px-5 py-20 md:py-40">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-16 flex flex-col items-center text-center md:mb-32">
+      <div
+        class="relative mb-10 flex flex-col items-center text-center md:mb-20"
+      >
         <span
-          class="font-kimm mb-2 text-[8px] tracking-[0.4em] text-gray-300 md:text-sm"
+          class="font-kimm absolute top-0 left-0 mb-4 text-[8px] tracking-[0.4em] text-gray-300 md:text-sm"
         >
-          04 / CONTACT
+          04 / 문의
         </span>
         <h2
-          class="font-kimm text-3xl font-bold tracking-tight text-gray-900 md:text-6xl"
+          class="font-SUIT mt-6 mb-3 text-2xl font-bold tracking-[0.4em] text-gray-400 md:mt-10 md:text-5xl"
         >
-          공간을 온(On)하다
+          SPACE ON.
         </h2>
         <div class="mt-6 h-[1.5px] w-8 bg-red-800 md:w-20"></div>
       </div>
 
       <div class="grid grid-cols-1 gap-20 md:grid-cols-2 md:gap-32">
-        <div class="flex flex-col gap-8 md:gap-12">
+        <div class="flex flex-col gap-4 md:gap-12">
           <h3
-            class="font-kimm text-lg tracking-widest text-gray-900 md:text-xl"
+            class="font-kimm text-lg tracking-widest text-gray-400 md:text-xl"
           >
-            PROCESS
+            순서
           </h3>
-          <div class="grid grid-cols-1 gap-8 md:gap-10">
+          <div class="grid grid-cols-1 gap-5 md:gap-10">
             <div
               v-for="(step, index) in processes"
               :key="index"
-              class="group flex items-center gap-6"
+              class="group flex items-center"
             >
               <span
-                class="font-sans text-3xl font-black text-gray-100 transition-colors group-hover:text-red-100 md:text-5xl"
+                class="font-SUIT text-3xl font-black text-gray-200 transition-colors group-hover:text-red-100 md:text-5xl"
               >
                 0{{ index + 1 }}
               </span>
               <div class="flex flex-col">
                 <span
-                  class="font-sans text-[10px] font-black tracking-widest text-red-800 md:text-xs"
+                  class="font-SUIT text-[12px] font-black tracking-widest text-[#943939] md:text-xs"
                   >{{ step.en }}</span
                 >
                 <span
-                  class="font-sans text-base font-bold text-gray-800 md:text-2xl"
+                  class="font-SUIT text-base font-bold text-gray-400 md:text-2xl"
                   >{{ step.ko }}</span
                 >
               </div>
@@ -61,40 +63,40 @@ const processes = [
         >
           <div class="flex flex-col gap-6">
             <h3
-              class="font-kimm text-lg tracking-widest text-red-800 md:text-xl"
+              class="font-kimm text-lg tracking-widest text-[#943939] md:text-xl"
             >
-              INQUIRY
+              연락
             </h3>
             <div
-              class="flex flex-col gap-3 font-sans text-2xl font-black text-gray-900 md:text-4xl"
+              class="flex flex-col gap-3 font-sans text-2xl font-black text-gray-700 md:text-4xl"
             >
               <a
-                href="tel:02-xxx-xxxx"
-                class="transition-colors hover:text-red-800"
-                >02. XXX. XXXX</a
+                href="tel:053-963-6189"
+                class="transition-colors hover:text-[#943939]"
+                >053. 963. 6189</a
               >
               <a
-                href="tel:010-xxxx-xxxx"
-                class="transition-colors hover:text-red-800"
-                >010. XXXX. XXXX</a
+                href="tel:010-3819-6189"
+                class="transition-colors hover:text-[#943939]"
+                >010. 3819. 6189</a
               >
               <p
                 class="mt-2 text-sm font-light tracking-wide text-gray-400 md:text-lg"
               >
-                contact@onj.kr
+                ylee.onj@gmail.com
               </p>
             </div>
           </div>
 
           <div class="flex flex-col gap-3">
             <h4
-              class="font-sans text-[10px] font-black tracking-widest text-gray-300 uppercase md:text-xs"
+              class="font-sans text-[12px] font-black tracking-widest text-gray-300 uppercase md:text-sm"
             >
               Working Hours
             </h4>
-            <p class="font-sans text-sm font-bold text-gray-600 md:text-lg">
-              평일 09:00 — 18:00 <br class="md:hidden" />
-              <span class="ml-2 font-light text-gray-300 md:ml-4"
+            <p class="font-sans text-sm font-bold text-gray-700 md:text-lg">
+              평일 09:00 — 20:00 <br class="md:hidden" />
+              <span class="ml-2 font-light text-gray-400 md:ml-4"
                 >(주말/공휴일 휴무)</span
               >
             </p>
@@ -112,6 +114,6 @@ const processes = [
 
 <style scoped>
 .font-kimm {
-  font-family: 'KIMM_Bold', sans-serif;
+  font-family: 'KIMM_Bold', SUIT;
 }
 </style>
