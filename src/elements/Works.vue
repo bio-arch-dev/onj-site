@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -6,7 +7,23 @@ import 'swiper/css/pagination'
 
 const modules = [Pagination]
 
-// 프로젝트 데이터 (12개 현장 예시)
+// 라이트박스 상태관리
+const isModalOpen = ref(false)
+const selectedImage = ref('')
+
+// 이미지 열기
+const openModal = (imgUrl) => {
+  selectedImage.value = imgUrl // 주소 저장
+  isModalOpen.value = true // 모달 열기
+  document.body.style.overflow = 'hidden' // 뒷배경 스크롤 방지
+}
+
+// 이미지 닫기 함수
+const closeModal = () => {
+  isModalOpen.value = false
+  document.body.style.overflow = 'auto' // 스크롤 복구
+}
+
 const projects = [
   {
     title: 'CHOI CHANG-HYEOK ORTHOPEDIC SURGERY',
@@ -357,7 +374,8 @@ const projects = [
           <div
             v-for="(img, iIdx) in project.images"
             :key="iIdx"
-            class="aspect-4/3 overflow-hidden rounded-xl bg-gray-50"
+            class="aspect-4/3 cursor-pointer overflow-hidden rounded-xl bg-gray-50"
+            @click="openModal(img)"
           >
             <img
               :src="img"
@@ -382,7 +400,8 @@ const projects = [
                 <div
                   v-for="offset in [0, 1, 2, 3]"
                   :key="offset"
-                  class="aspect-4/3 overflow-hidden rounded-xl bg-gray-50"
+                  class="aspect-4/3 cursor-pointer overflow-hidden rounded-xl bg-gray-50"
+                  @click="openModal(project.images[groupIdx + offset])"
                 >
                   <img
                     :src="project.images[groupIdx + offset]"
@@ -395,6 +414,40 @@ const projects = [
         </div>
       </div>
     </div>
+
+    <Transition name="fade">
+      <div
+        v-if="isModalOpen"
+        class="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4 md:p-10"
+        @click.self="closeModal"
+      >
+        <button
+          @click="closeModal"
+          class="fixed top-6 right-6 z-110 text-white/70 transition-colors hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <img
+          :src="selectedImage"
+          class="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+          alt="확대 이미지"
+        />
+      </div>
+    </Transition>
   </section>
 </template>
 
@@ -402,8 +455,17 @@ const projects = [
 .project-swiper {
   --swiper-theme-color: #943939;
 }
-/* 모바일에서 점 위치 조절 */
 :deep(.swiper-pagination) {
   bottom: 0 !important;
+}
+
+/* 모달 페이드 애니메이션 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
