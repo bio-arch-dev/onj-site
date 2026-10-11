@@ -1,139 +1,182 @@
 <template>
   <header
     :class="[
-      'z-50 w-full px-2 transition-all duration-300 sm:px-4 md:px-6',
-      'sticky top-0 bg-white shadow-sm',
-      'md:fixed md:top-0',
+      'fixed top-0 z-50 w-full px-3 transition-all duration-300 sm:px-4 md:px-6',
       isScrolled || route.path !== '/'
-        ? 'md:bg-white md:shadow-md'
-        : 'md:bg-transparent md:shadow-none',
+        ? 'bg-white shadow-md'
+        : 'bg-white/90 backdrop-blur-sm md:bg-transparent md:shadow-none',
     ]"
   >
-    <div
-      class="mx-auto flex max-w-7xl items-center justify-between py-2.5 md:py-4"
-    >
-      <!-- 좌측: 로고 + 데스크톱 네비게이션 -->
-      <div class="flex items-center gap-6 lg:gap-10">
-        <!-- 로고 영역: 클릭 시 홈 이동 처리 -->
-        <div
-          class="group flex cursor-pointer items-center gap-2 pl-1 whitespace-nowrap md:gap-3"
-          @click="handleLogoClick"
-        >
-          <div
-            class="text-gray-400 transition-colors duration-300 group-hover:text-[#943939]"
-          >
-            <OnjLogo />
-          </div>
-          <span
-            class="font-kimm hidden text-[10px] tracking-tighter text-gray-400 opacity-80 md:block"
-          >
-            실내건축 공사업
-          </span>
-        </div>
-
-        <!-- 데스크톱 전용 메뉴 -->
-        <nav
-          class="hidden items-center gap-6 whitespace-nowrap md:flex lg:gap-8"
-        >
-          <a
-            v-for="menu in MENU_ITEMS"
-            :key="menu.id"
-            :href="menu.id"
-            @click="scrollToSection($event, menu.id)"
-            class="font-kimm text-sm font-medium text-gray-400 transition-colors hover:text-[#943939]"
-          >
-            {{ menu.title }}
-          </a>
-        </nav>
-      </div>
-
-      <!-- 우측: 캡슐 버튼 + 햄버거 메뉴 -->
-      <div class="flex items-center gap-1.5 sm:gap-3">
-        <!-- 상업공간 | 주거공간 캡슐 세그먼트 스위치 -->
+    <div class="mx-auto flex max-w-7xl items-center py-2 sm:py-2.5 md:py-4">
+      <!-- 좌측: 0.8배 축소 로고 + 밀착된 온재 텍스트 -->
+      <div
+        class="group flex shrink-0 cursor-pointer items-center gap-0.5 pl-1 whitespace-nowrap"
+        @click="handleLogoClick"
+      >
+        <!-- 심볼 그래픽 (기존 대비 0.8배 추가 축소) -->
         <div
           :class="[
-            'flex items-center rounded-full p-0.5 text-[11px] font-medium transition-all duration-300 sm:p-1 sm:text-xs',
+            'origin-left scale-[0.65] transition-colors duration-300 sm:scale-[0.72] md:scale-[0.75]',
             isScrolled || route.path !== '/'
-              ? 'border border-gray-200 bg-gray-100 text-gray-700'
-              : 'border border-gray-100 bg-white text-gray-800 shadow-md',
+              ? 'text-gray-400 group-hover:text-[#943939]'
+              : 'text-[#943939]',
           ]"
         >
-          <RouterLink
-            :to="SPACE_CATEGORIES[0].path"
-            :class="[
-              'rounded-full px-2.5 py-1 whitespace-nowrap transition-colors sm:px-3 sm:py-1',
-              route.path === '/commercial'
-                ? 'bg-white font-bold text-[#943939] shadow-sm'
-                : 'hover:bg-black/5 hover:text-[#943939]',
-            ]"
-          >
-            {{ SPACE_CATEGORIES[0].title }}
-          </RouterLink>
-
-          <span
-            :class="[
-              'mx-0.5 h-2.5 w-px sm:h-3',
-              isScrolled || route.path !== '/' ? 'bg-gray-300' : 'bg-gray-200',
-            ]"
-          ></span>
-
-          <RouterLink
-            :to="SPACE_CATEGORIES[1].path"
-            :class="[
-              'rounded-full px-2.5 py-1 whitespace-nowrap transition-colors sm:px-3 sm:py-1',
-              route.path === '/residential'
-                ? 'bg-white font-bold text-[#943939] shadow-sm'
-                : 'hover:bg-black/5 hover:text-[#943939]',
-            ]"
-          >
-            {{ SPACE_CATEGORIES[1].title }}
-          </RouterLink>
+          <OnjLogo />
         </div>
 
-        <!-- 우측 햄버거 메뉴 -->
-        <label
-          for="my-drawer"
-          class="btn btn-ghost btn-circle btn-sm sm:btn-md drawer-button"
+        <!-- 한글 온재 (연그레이) -->
+        <span
+          class="font-kimm text-xs font-bold tracking-tight text-gray-400 transition-colors group-hover:text-[#943939] sm:text-sm"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="h-5 w-5 stroke-current sm:h-6 sm:w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </label>
+          온재
+        </span>
       </div>
+
+      <!-- 중앙: 네비게이션 (센터 쪽으로 이동하여 우측 여백 확보) -->
+      <nav
+        class="flex flex-1 items-center justify-center gap-4 whitespace-nowrap sm:gap-6 md:gap-8"
+      >
+        <!-- 1. 포트폴리오 드롭다운 -->
+        <div
+          ref="dropdownRef"
+          class="relative py-1"
+          @mouseenter="onMouseEnter"
+          @mouseleave="onMouseLeave"
+        >
+          <button
+            type="button"
+            @click="toggleDropdown"
+            class="font-kimm flex items-center gap-0.5 text-xs font-medium text-gray-400 transition-colors hover:text-[#943939] sm:gap-1 sm:text-sm"
+          >
+            포트폴리오
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-3 w-3 transition-transform duration-200 sm:h-3.5 sm:w-3.5"
+              :class="{ 'rotate-180': isDropdownOpen }"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <!-- 드롭다운 패널 (버튼 기준 중앙 정렬) -->
+          <Transition name="dropdown-fade">
+            <div
+              v-if="isDropdownOpen"
+              class="absolute top-full left-1/2 z-50 mt-1 w-36 -translate-x-1/2 rounded-2xl border border-stone-100 bg-white/98 p-1.5 shadow-xl backdrop-blur-md sm:w-40 sm:p-2"
+            >
+              <RouterLink
+                v-for="sub in PORTFOLIO_MENUS"
+                :key="sub.path"
+                :to="sub.path"
+                @click="isDropdownOpen = false"
+                class="block rounded-xl px-3.5 py-2 text-center text-xs font-medium text-stone-600 transition-colors hover:bg-stone-50 hover:text-[#943939] active:bg-stone-100 active:text-[#943939]"
+              >
+                {{ sub.title }}
+              </RouterLink>
+            </div>
+          </Transition>
+        </div>
+
+        <!-- 2. 소통 (연그레이) -->
+        <a
+          :href="commId"
+          @click="scrollToSection($event, commId)"
+          class="font-kimm text-xs font-medium text-gray-400 transition-colors hover:text-[#943939] sm:text-sm"
+        >
+          소통
+        </a>
+
+        <!-- 3. 문의 (연그레이) -->
+        <a
+          :href="contactId"
+          @click="scrollToSection($event, contactId)"
+          class="font-kimm text-xs font-medium text-gray-400 transition-colors hover:text-[#943939] sm:text-sm"
+        >
+          문의
+        </a>
+      </nav>
+
+      <!-- 우측: 좌측 로고 너비만큼 더미 스페이서를 두어 메뉴가 정확히 중앙에 오도록 균형 유지 -->
+      <div class="hidden w-15 shrink-0 sm:block"></div>
     </div>
   </header>
 </template>
 
 <script setup>
 import OnjLogo from '@/components/OnjLogo.vue'
-import { MENU_ITEMS, SPACE_CATEGORIES } from '@/constants.js'
+import { MENU_ITEMS } from '@/constants.js'
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
 const route = useRoute()
 
+// constants.js의 실제 ID 자동 추출 (소통, 문의)
+const commMenu = MENU_ITEMS?.find((m) => m.title.includes('소통'))
+const contactMenu = MENU_ITEMS?.find((m) => m.title.includes('문의'))
+
+const commId = commMenu ? commMenu.id : '#story'
+const contactId = contactMenu ? contactMenu.id : '#contact'
+
+// 포트폴리오 4대 영역
+const PORTFOLIO_MENUS = [
+  { title: '상업공간', path: '/commercial' },
+  { title: '주거공간', path: '/residential' },
+  { title: '의료공간', path: '/medical' },
+  { title: '관공사', path: '/public' },
+]
+
 const isScrolled = ref(false)
+const isDropdownOpen = ref(false)
+const dropdownRef = ref(null)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
 
-// 로고 클릭 처리: 메인이면 맨 위로 스크롤, 서브 페이지면 메인('/')으로 이동
+const onMouseEnter = () => {
+  if (window.innerWidth >= 768) {
+    isDropdownOpen.value = true
+  }
+}
+
+const onMouseLeave = () => {
+  if (window.innerWidth >= 768) {
+    isDropdownOpen.value = false
+  }
+}
+
+const handleClickOutside = (e) => {
+  if (dropdownRef.value && !dropdownRef.value.contains(e.target)) {
+    isDropdownOpen.value = false
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('click', handleClickOutside)
+})
+
 const handleLogoClick = () => {
+  isDropdownOpen.value = false
   if (route.path === '/') {
     window.scrollTo({
       top: 0,
@@ -144,16 +187,16 @@ const handleLogoClick = () => {
   }
 }
 
-// 메뉴 스크롤 처리: 서브 페이지에서 누르면 메인으로 이동 후 해당 위치로 이동
 const scrollToSection = async (e, id) => {
   e.preventDefault()
+  isDropdownOpen.value = false
 
   if (route.path !== '/') {
     await router.push('/')
     await nextTick()
     setTimeout(() => {
       moveToElement(id)
-    }, 100)
+    }, 150)
   } else {
     moveToElement(id)
   }
@@ -162,7 +205,7 @@ const scrollToSection = async (e, id) => {
 const moveToElement = (id) => {
   const target = document.querySelector(id)
   if (target) {
-    const headerOffset = 80
+    const headerOffset = 70
     const elementPosition = target.getBoundingClientRect().top
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
@@ -173,3 +216,15 @@ const moveToElement = (id) => {
   }
 }
 </script>
+
+<style scoped>
+.dropdown-fade-enter-active,
+.dropdown-fade-leave-active {
+  transition: all 0.2s ease-out;
+}
+.dropdown-fade-enter-from,
+.dropdown-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -6px);
+}
+</style>

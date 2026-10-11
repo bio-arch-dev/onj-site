@@ -1,10 +1,15 @@
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const businessItems = [
   {
     icon: 'medical_services',
     title: 'SYSTEM ON.',
     desc: '병원, 수술실, 클린룸',
-    pointColor: 'text-[#1A434E]', // 의관/의녀의 심옥색
+    pointColor: 'text-[#1A434E]',
+    path: '/medical',
   },
   {
     icon: 'corporate_fare',
@@ -12,20 +17,27 @@ const businessItems = [
     desc: '교육, 공공, 공항',
     sub: '여성기업',
     pointColor: 'text-[#943939]', // 온재레드
+    path: '/public',
   },
   {
     icon: 'storefront',
     title: 'BRAND ON.',
     desc: '프랜차이즈, 요식업, 뷰티',
-    pointColor: 'text-[#926A2D]', // 전통 유기의 황동색
+    pointColor: 'text-[#926A2D]',
+    path: '/commercial',
   },
   {
     icon: 'night_shelter',
     title: 'LIFE ON.',
     desc: '아파트, 주택, 별장',
     pointColor: 'text-[#A3A3A3]', // 연그레이
+    path: '/residential',
   },
 ]
+
+const navigateTo = (path) => {
+  router.push(path)
+}
 </script>
 
 <template>
@@ -45,7 +57,8 @@ const businessItems = [
         <div
           v-for="item in businessItems"
           :key="item.title"
-          class="flex flex-col items-center rounded-3xl bg-[#F9F9F9] p-5 text-center shadow-[3px_4px_10px_rgb(0,0,0,0.13)] md:flex-row md:items-center md:rounded-[3rem] md:p-16 md:text-left"
+          @click="navigateTo(item.path)"
+          class="flex cursor-pointer flex-col items-center rounded-3xl bg-[#F9F9F9] p-5 text-center shadow-[3px_4px_10px_rgb(0,0,0,0.13)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:flex-row md:items-center md:rounded-[3rem] md:p-16 md:text-left"
         >
           <div class="shrink-0 md:mr-10">
             <span
