@@ -15,7 +15,7 @@ const businessItems = [
     icon: 'corporate_fare',
     title: 'STANDARD ON.',
     desc: '교육, 공공, 공항',
-    sub: '여성기업',
+    sub: '여성기업인증',
     pointColor: 'text-[#943939]', // 온재레드
     path: '/public',
   },
