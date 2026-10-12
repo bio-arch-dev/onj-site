@@ -6,7 +6,7 @@
       title-light="기획부터 서류까지,"
       title-dark="틀을 깨는 관공사 디자인."
       badge-title="CERTIFIED LICENSE, TRANSPARENT WORK"
-      brand-logo-text="PUBLIC ON."
+      brand-logo-text="STANDARD ON."
       brand-desc="관공서 입찰 및 계약 규정에 맞춘 체계적인 공정 관리와 하자 보증 시스템을 약속합니다."
     >
       <template #description>

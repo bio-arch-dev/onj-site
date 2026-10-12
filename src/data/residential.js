@@ -159,6 +159,32 @@ export const residentialProjects = [
     ],
   },
   {
+    title: 'URBAN ATTIC',
+    location: '2022 수성네거리 복층 상가주택',
+    comment:
+      '대구은행 본점 앞 도심 뷰를 품은 이 복층 공간은 건축사 부부의 워크 앤 라이프가 조화롭게 이어지는 힐링 아지트입니다. 박공지붕 특유의 입체적인 사선 볼륨을 온전히 드러내고자 벽과 천장을 정갈한 화이트로 비워내고, 바닥에는 짙은 우드를 매치해 묵직한 안정감을 부여했습니다. 4층 메인 다이닝의 우드 루버 포인트와 블랙 펜던트가 드리운 맞춤 작업 테이블, 자작합판 계단판으로 군더더기 없이 연결되는 미니멀한 동선을 지나면 5층 아늑한 다락 침실이 펼쳐집니다. 시원한 천창 채광과 은은한 간접조명이 쏟아지는 박공 침실은 바쁜 일상 속 온전한 쉼을 선사하는 특별한 휴식처입니다.',
+    images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764606/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_14_rfzjd7.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764604/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_1_hb9nch.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764606/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_63_hdze6x.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764607/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_82_tig4bu.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764606/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_7_ial8pc.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764605/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_13_gso9by.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764605/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_29_rfvfr4.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791764606/EFAA_5%EC%B8%B5_%EC%A3%BC%EA%B0%84_-_32_vq2j8c.jpg',
+    ],
+    altTexts: [
+      '대구 인테리어 온재 시공 박공지붕의 입체적 볼륨감과 짙은 우드 바닥이 어우러진 복층 거실 전경',
+      '온재 시공 천장 우드 루버 포인트와 대형 다이닝 테이블이 돋보이는 대구 주택 인테리어',
+      '대구 온재 인테리어 은은한 간접조명과 천창 채광으로 개방감을 극대화한 아늑한 박공 다락방',
+      '대구 온재 익스테리어 바쁜 일상 속 프라이빗한 휴식을 선사하는 루프탑 테라스 전경',
+      '대구 인테리어 온재 건축사 부부의 미니멀한 감성을 담아낸 선과 면이 살아있는 복층 주거 공간 뷰',
+      '서재 인테리어 바닥 톤과 맞춘 짙은 우드 제작 테이블과 모던한 블랙 펜던트 조명 공간',
+      '미니멀한 화이트 벽면과 자작합판 디딤판으로 간결하게 연결한 복층 계단실',
+      '온재 욕실 인테리어 짙은 다크 타일과 은은한 간접등, 무문선 마감으로 완성한 감각적인 화장실',
+    ],
+  },
+  {
     title: 'RESTORED NOSTALGIA',
     location: '2021 청도 기와집 올리모델링',
     comment:

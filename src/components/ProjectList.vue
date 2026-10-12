@@ -20,7 +20,7 @@
         </div>
         <p
           v-if="project.comment"
-          class="font-SUIT mt-4 hidden max-w-2xl text-sm leading-relaxed font-light break-keep text-gray-500 md:block"
+          class="font-SUIT mt-3 block max-w-2xl text-xs leading-relaxed font-light break-keep text-gray-500 sm:mt-4 sm:text-sm"
         >
           {{ project.comment }}
         </p>

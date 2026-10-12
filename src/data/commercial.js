@@ -168,6 +168,33 @@ export const commercialProjects = [
     ],
   },
   {
+    title: 'LINEAR CONTRAST',
+    location: '2021 혁신도시 사무실',
+    category: '기타',
+    comment:
+      '천정과 벽, 바닥을 올 화이트로 정돈해 시각적 한계를 지우고 개방감을 극대화한 사무실입니다. 입체적인 간접조명 라인을 섬세하게 레이어드하고, 센터의 장과 카펫에 매트한 블랙을 매치해 절제된 모노톤 대비를 완성했습니다. 고정된 파티션을 과감히 덜어내는 대신 대형 슬라이딩 무빙월을 적용하여, 평소에는 시원하게 트인 하나의 공간으로 쓰다가 필요에 따라 유연하게 분리되는 가변형 조닝을 구현했습니다.',
+    images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766161/DSC00330-HDR_rwx0s0.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766160/DSC00233-HDR_qdveos.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766161/DSC00264-HDR_kjggco.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766162/DSC00402-HDR_wdqehb.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766162/DSC00501-HDR_juohbf.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766161/DSC00258-HDR_x8pmyp.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766161/DSC00249-HDR_p7yt0u.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766161/DSC00285-HDR_q3iukk.jpg',
+    ],
+    altTexts: [
+      '대구 인테리어 전문 온재가 연출한 모던 오피스 블랙 라인이 돋보이는 전체 전경',
+      '빛의 음영만으로 깊이감을 완성한 대구 인테리어. 라인 간접조명과 순백색 마감재의 조화가 돋보이는 온재의 상업 공간 설계',
+      '미니멀한 디자인과 기능성을 동시에 잡은 대구 인테리어. 화이트 슬라이딩 월로 깔끔한 면 분할을 완성한 온재의 디테일',
+      '사무실 인테리어 탕비 공간. 포인트 펜던트 조명과 플랜트 액자로 아늑한 무드를 조성한 온재의 리프레시 룸 전경',
+      '연속된 라인 조명 디테일이 돋보이는 대구 사무실 인테리어. 온재가 맞춤 제작한 벽면 일체형 수납장과 끊김 없는 간접 라이팅.',
+      '가벽 없이 빛으로 공간을 분리한 대구 사무실 인테리어. 천정 라인 조명 설계로 업무 영역을 자연스럽게 구분한 온재의 조닝 기법.',
+      '사용 목적에 따라 공간이 변형되는 대구 인테리어 설계. 온재의 슬라이딩 도어로 데드스페이스 없이 완성한 스마트 조닝',
+      '탕비 공간과 파우더존의 마감재 톤을 일치시켜 단정하게 연출한 온재의 디테일한 앵글',
+    ],
+  },
+  {
     title: 'HAIR ATELIER',
     location: '2020 버르장머리 미용실',
     category: '미용실',

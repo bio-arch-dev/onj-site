@@ -69,7 +69,7 @@ import { commercialProjects } from '@/data/commercial'
 import ProjectList from '@/components/ProjectList.vue'
 import CategoryHero from '@/components/CategoryHero.vue'
 
-const categories = ['전체', '프랜차이즈 F&B', '미용실']
+const categories = ['전체', '프랜차이즈 F&B', '미용실', '기타']
 const activeCategory = ref('전체')
 
 const filteredProjects = computed(() => {
