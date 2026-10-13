@@ -38,7 +38,7 @@ export const residentialProjects = [
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791613953/KakaoTalk_20261010_110356629_13_ohkknr.jpg',
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791613970/KakaoTalk_20261010_110356629_04_onwowy.jpg',
       'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791613991/KakaoTalk_20261010_110356629_wiz5up.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791614024/KakaoTalk_20261010_110356629_03_z5vmjv.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791613904/KakaoTalk_20261010_110356629_02_ms0rzu.jpg',
     ],
     altTexts: [
       '온재 시공 연노랑빛 베이지 디아망 벽지로 따스함을 더한 아파트 거실 전경',
@@ -208,6 +208,32 @@ export const residentialProjects = [
       '대구 온재 슬림 프레임 픽스창을 통해 청도의 자연 차경을 한 폭의 그림처럼 담아낸 뷰',
       '대구 온재 시공 호텔식 무드의 입체적인 화이트 마블 세면대 디테일 컷',
       '대구 온재 화장실 인테리어 차분한 그레이 타일로 호텔 같은 무드를 연출한 청도 주택 화장실',
+    ],
+  },
+  {
+    title: 'SCENIC PANORAMA',
+    location: '2021 대구 대곡동 상가주택',
+    comment:
+      '대곡 복층 주택 프로젝트는 사계절 산세가 한눈에 들어오는 파노라마 조망을 온전히 품어낸 럭셔리 주거 현장입니다. 거실 양면을 아우르는 코너 전면 통창과 정갈한 화이트 벽면, 소프트 라이트 그레이 바닥이 맞물려 압도적인 개방감을 선사합니다. 와이드 코너 창으로 차경을 담은 메인 주방과 넉넉한 보조주방은 실용성과 고급스러움을 동시에 충족합니다. 계단부와 현관은 천장 빗각 라인을 살려 정밀하게 맞춤 제작한 오크 수납장으로 묵직한 무게감을 더했습니다. 아치형 프레임 속 화이트·연그레이 건식 세면대와 침실의 우드·블랙 건식 파우더 공간은 호텔식 감성을 연출하며, 차콜 바닥과 생동감 넘치는 오렌지 박공 벽이 조화를 이루는 복층 홈짐 및 독립 다락 공간까지 세심하게 레이어드해 완성했습니다.',
+    images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781235/IMG_4782_axaqdw.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781234/IMG_4770_dkohus.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781235/IMG_4786_iduyu6.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781234/IMG_4729_gjvcng.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781236/IMG_4785_ourcea.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781234/IMG_4754_t3pjpk.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781234/IMG_4742_yqh6nc.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781234/IMG_4741_xb4abl.jpg',
+    ],
+    altTexts: [
+      '온재 시공 대구 거실 인테리어 코너 전면 통창 너머로 푸른 산세가 펼쳐지는 대곡 복층 주택 전경',
+      '대구 인테리어 온재 산 풍경을 담은 와이드 코너창과 보조주방을 갖춘 대구 상가주택 신축 주방 전경',
+      '대구 홈짐 인테리어 온재가 설계한 차콜 바닥과 감각적인 오렌지 박공 벽 포인트의 복층 운동 공간',
+      '대구 온재 인테리어 묵직한 오크 원목 벽면장으로 깊이 있는 첫인상을 완성한 대곡 복층 주택 현관 뷰',
+      '대구 온재 대구 상가주택 신축 시야 간섭 없이 마운틴뷰를 온전히 즐길 수 있는 코너 뷰',
+      '대구 건식 세면대 온재 시공 부드러운 라운드 우드 벽체와 화이트 연그레이 톤이 어우러진 호텔식 파우더존',
+      '대구 인테리어 온재 곡선 라운드 우드 가벽과 클래식한 오크 헤링본 마루가 돋보이는 대곡 안방 침실',
+      '대구 건식 세면대 온재 감각적인 블랙 수전과 우드 벽체 마감으로 고급스러움을 더한 안방 세면 공간',
     ],
   },
 ]
