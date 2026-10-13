@@ -222,4 +222,31 @@ export const commercialProjects = [
       '공간의 온기를 더하는 간접 조명과 골드 프레임 거울의 우아한 조화',
     ],
   },
+  {
+    title: 'MONOCHROME RETREAT',
+    location: '2020 한림양식당',
+    category: '프랜차이즈 F&B',
+    comment:
+      '부산 초량의 오래된 한림장 여관을 호텔 셰프의 감각을 담아 현대적인 다이닝 공간으로 재해석한 올리모델링 프로젝트입니다. 낡은 골목의 정취 속에서 화이트 톤의 매스를 기본 틀로 설정하고, 모던한 철제 파사드와 블랙 프레임 및 블랙 글라스로 정갈한 대비감을 부여했습니다. 기존 유리문 자리는 거친 철거 단면의 물성을 자연스럽게 보존하면서 대형 픽스창을 결합해 과거와 현재가 공존하는 구조미를 완성했습니다. 내부 홀에는 대형 샹들리에를 중심에 배치하여 클래식한 무드와 정제된 모던함이 균형을 이루는 파인다이닝 공간을 구현했습니다.',
+    images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766664/_DSC9811_nvng1e.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766663/_DSC9758_owuzit.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766664/_DSC9816_nfmpnx.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766664/_DSC9746_kgrzkk.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766664/_DSC9800_ks6a9e.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766663/_DSC9715_bexrnq.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766664/_DSC9833_kwjinj.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791766665/_DSC9847_sap5wi.jpg',
+    ],
+    altTexts: [
+      '대구 온재 상업공간 인테리어 노후 건물 재생',
+      '온재 시공 레스토랑 인테리어 대형 샹들리에 조명과 블랙 글라스 포인트 홀 전경',
+      '온재 시공 상가 리모델링 모던 화이트 톤과 블랙 철제 파사드 외관 전경',
+      '대구 온재 구조 리모델링 빈티지 거친 질감과 모던 전창',
+      '초량 인테리어 블랙 철제 파사드 내부',
+      '대구 양식당인테리어 다이닝 공간 인테리어 모던한 블랙 간살창과 아늑한 조명이 어우러진 홀 뷰',
+      '대구인테리어 모던한 블랙 철제 간살 외관 창호 뷰',
+      '온재 시공 부산 상가 리모델링 새하얀 외벽과 모던한 블랙 철제 파사드가 대비되는 건물 풀샷 전경',
+    ],
+  },
 ]

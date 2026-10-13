@@ -212,7 +212,7 @@ export const residentialProjects = [
   },
   {
     title: 'SCENIC PANORAMA',
-    location: '2021 대구 대곡동 상가주택',
+    location: '2021 대구 대곡동 상가주택 3층',
     comment:
       '대곡 복층 주택 프로젝트는 사계절 산세가 한눈에 들어오는 파노라마 조망을 온전히 품어낸 럭셔리 주거 현장입니다. 거실 양면을 아우르는 코너 전면 통창과 정갈한 화이트 벽면, 소프트 라이트 그레이 바닥이 맞물려 압도적인 개방감을 선사합니다. 와이드 코너 창으로 차경을 담은 메인 주방과 넉넉한 보조주방은 실용성과 고급스러움을 동시에 충족합니다. 계단부와 현관은 천장 빗각 라인을 살려 정밀하게 맞춤 제작한 오크 수납장으로 묵직한 무게감을 더했습니다. 아치형 프레임 속 화이트·연그레이 건식 세면대와 침실의 우드·블랙 건식 파우더 공간은 호텔식 감성을 연출하며, 차콜 바닥과 생동감 넘치는 오렌지 박공 벽이 조화를 이루는 복층 홈짐 및 독립 다락 공간까지 세심하게 레이어드해 완성했습니다.',
     images: [
@@ -234,6 +234,32 @@ export const residentialProjects = [
       '대구 건식 세면대 온재 시공 부드러운 라운드 우드 벽체와 화이트 연그레이 톤이 어우러진 호텔식 파우더존',
       '대구 인테리어 온재 곡선 라운드 우드 가벽과 클래식한 오크 헤링본 마루가 돋보이는 대곡 안방 침실',
       '대구 건식 세면대 온재 감각적인 블랙 수전과 우드 벽체 마감으로 고급스러움을 더한 안방 세면 공간',
+    ],
+  },
+  {
+    title: 'WHITE TRANQUILITY',
+    location: '2021 대구 상가주택',
+    comment:
+      '울창한 숲과 전통 기와 지붕의 정취가 와이드 통창 너머로 시원하게 펼쳐지는 고급 주거 프로젝트입니다. 순백의 화이트 벽면과 밝은 라이트 그레이 바닥재를 매치하여, 계절마다 변화하는 자연의 차경이 내부 공간의 완벽한 오브제가 되도록 간결하게 정돈했습니다. 시스템 에어컨 단내림 시공을 국소화하여 층고를 극대화하였으며, 거실 메인 디자인 조명과 복도 및 건식 세면대의 라인 간접 조명으로 정제된 조도 밸런스를 구축했습니다. 제작 그레이 빌트인 수납장과 현관의 내추럴 우드 벤치 디테일을 더해 기능성과 미니멀한 조형미를 완성했습니다.',
+    images: [
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4706_xhrzxe.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4701_rixbui.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4707_ufd2yp.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4720_xttrm2.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781316/IMG_4696_prlpe8.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781315/IMG_4691_nfwwaw.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4714_f0ic8m.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1791781314/IMG_4702_emeswy.jpg',
+    ],
+    altTexts: [
+      '온재 시공 대구 아파트 인테리어 통창 너머 숲과 기와 뷰가 펼쳐지는 미니멀 거실 전경',
+      '대구인테리어 화이트 톤 마감과 대형 픽스창 차경 연출',
+      '온재 시공 대구 아파트 리모델링 화이트와 라이트 그레이 바닥이 이어지는 미니멀 복도 전경',
+      '대구 욕실 인테리어 모던한 연그레이 포세린 타일로 마감한 욕실 전경',
+      '대구인테리어 천장 라인을 따라 은은하게 떨어지는 간접등 연출 올화이트 건식 세면대 전경',
+      '대구 현관 인테리어 내추럴 우드 벤치와 하부 간접 조명 연출 전경',
+      '대구 아파트리모델링 화이트 톤 빌트인 시스템 에어컨 매입 시공 뷰',
+      '대구인테리어 화이트 톤 마감과 대형 픽스창 차경 연출',
     ],
   },
 ]

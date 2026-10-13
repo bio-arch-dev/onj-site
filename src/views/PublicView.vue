@@ -1,5 +1,6 @@
 <template>
   <main class="min-h-screen bg-white pt-24 text-stone-900 md:pt-32">
+    <!-- 1. HERO SECTION -->
     <CategoryHero
       meta-tag="ONJ Public Architecture"
       sub-tag="Public & Corporate Projects"
@@ -18,9 +19,31 @@
       </template>
     </CategoryHero>
 
-    <!-- 포트폴리오 섹션 -->
+    <!-- 2. 인증서 & 표창장 섹션 (면허 및 여성기업 공인 자격) -->
     <section
-      class="w-full border-t border-stone-100 bg-white px-5 py-12 md:py-20"
+      class="w-full border-t border-stone-100 bg-stone-50/50 pt-12 pb-4 md:pt-16 md:pb-8"
+    >
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-8">
+          <span
+            class="font-mono text-[10px] tracking-[0.2em] text-[#943939] uppercase"
+          >
+            Official Verification
+          </span>
+          <h2
+            class="font-kimm mt-1 text-xl font-normal text-stone-700 sm:text-2xl"
+          >
+            면허 및 인증
+          </h2>
+        </div>
+      </div>
+      <!-- Certi 컴포넌트 호출 -->
+      <Certi />
+    </section>
+
+    <!-- 3. 포트폴리오 섹션 -->
+    <section
+      class="w-full border-t border-stone-200/60 bg-white px-5 py-12 md:py-20"
     >
       <div class="mx-auto max-w-7xl">
         <div class="mb-14">
@@ -46,4 +69,5 @@
 import { publicProjects } from '@/data/public'
 import ProjectList from '@/components/ProjectList.vue'
 import CategoryHero from '@/components/CategoryHero.vue'
+import Certi from '@/elements/Certi.vue'
 </script>
