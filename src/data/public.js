@@ -2,6 +2,8 @@ export const publicProjects = [
   {
     title: 'YOUTH CENTER',
     location: '2025 동구청소년센터',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223961049194',
+    youtubeUrl: 'https://www.youtube.com/shorts/HYLfN-65x14',
     category: '관공사',
     mainOrder: 3, // 메인 화면 3순위 노출
     comment:

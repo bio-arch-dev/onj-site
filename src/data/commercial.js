@@ -2,6 +2,7 @@ export const commercialProjects = [
   {
     title: 'JOGAEHANJAN',
     location: '2024 조개한잔',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223427978662',
     category: '프랜차이즈 F&B',
     mainOrder: 5,
     comment:
@@ -30,6 +31,8 @@ export const commercialProjects = [
   {
     title: 'MERIGGIARE',
     location: '2024 메리쟈레 카페',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223861177589',
+    youtubeUrl: 'https://www.youtube.com/shorts/SMmpKqWc2A0',
     category: '프랜차이즈 F&B',
     mainOrder: 6,
     comment:
@@ -58,6 +61,7 @@ export const commercialProjects = [
   {
     title: 'BAEGSONG SAENG-GOGI',
     location: '2023 백송 생고기',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223849885445',
     category: '프랜차이즈 F&B',
     mainOrder: 7,
     comment:
@@ -86,6 +90,8 @@ export const commercialProjects = [
   {
     title: 'CAFE BEOMEO',
     location: '2022 베오메오 황금점',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223919526620',
+    youtubeUrl: 'https://www.youtube.com/shorts/cjLjgo74ook',
     category: '프랜차이즈 F&B',
     mainOrder: 8,
     comment:
@@ -114,6 +120,7 @@ export const commercialProjects = [
   {
     title: 'PLAYMOM WATERROOM',
     location: '2022 플레이맘 워터룸',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/222993819147',
     category: '프랜차이즈 F&B',
     mainOrder: 11,
     comment:
@@ -142,6 +149,8 @@ export const commercialProjects = [
   {
     title: 'BAO HAIR ATELIER',
     location: '2021 바오 미용실',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223073119156',
+    youtubeUrl: 'https://www.youtube.com/shorts/xUbHHwqQ7M0',
     category: '미용실',
     mainOrder: 12,
     comment:
@@ -197,6 +206,7 @@ export const commercialProjects = [
   {
     title: 'HAIR ATELIER',
     location: '2020 버르장머리 미용실',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223934767998',
     category: '미용실',
     mainOrder: 13,
     comment:
@@ -225,6 +235,8 @@ export const commercialProjects = [
   {
     title: 'MONOCHROME RETREAT',
     location: '2020 한림양식당',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223986632990',
+    youtubeUrl: 'https://www.youtube.com/shorts/zqET8crkXtA',
     category: '프랜차이즈 F&B',
     comment:
       '부산 초량의 오래된 한림장 여관을 호텔 셰프의 감각을 담아 현대적인 다이닝 공간으로 재해석한 올리모델링 프로젝트입니다. 낡은 골목의 정취 속에서 화이트 톤의 매스를 기본 틀로 설정하고, 모던한 철제 파사드와 블랙 프레임 및 블랙 글라스로 정갈한 대비감을 부여했습니다. 기존 유리문 자리는 거친 철거 단면의 물성을 자연스럽게 보존하면서 대형 픽스창을 결합해 과거와 현재가 공존하는 구조미를 완성했습니다. 내부 홀에는 대형 샹들리에를 중심에 배치하여 클래식한 무드와 정제된 모던함이 균형을 이루는 파인다이닝 공간을 구현했습니다.',

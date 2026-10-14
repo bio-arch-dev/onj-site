@@ -54,6 +54,7 @@ export const residentialProjects = [
   {
     title: 'URBAN LAYER 03',
     location: '2025 대구 혁신도시 상가주택',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223985368273',
     mainOrder: 4,
     comment:
       '공원 코너에 자리한 대구 혁신도시 상가주택은 1층 상가가 탁월한 가시성과 접근성을 갖추었으며, 2층은 넓은 중정을 3층 주인세대는 나불지를 바라보는 탁월한 조망을 누릴 수 있도록 했습니다.',
@@ -81,6 +82,8 @@ export const residentialProjects = [
   {
     title: 'HOUSE CHEONGDO',
     location: '2021 청도 별장 신축',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223994709255',
+    youtubeUrl: 'https://www.youtube.com/shorts/OTCW52xsltg',
     mainOrder: 9,
     comment:
       '청도 산자락에 위치한 "HOUSE 청도"는 생활공간과 휴식공간을 서 측과 동 측 두군데로 나누고, 그 사이 복도를 연결한 구조로 이루어 졌습니다. 거실은 탁 트인 전망을 가득 담을수 있도록 기획 하였으며, 복도를 지날 때마다 자연스럽게 즐길수 있도록 했습니다.',
@@ -108,6 +111,8 @@ export const residentialProjects = [
   {
     title: 'LAVILLE',
     location: '2017 혁신도시 상가주택 신축',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223918242892',
+    youtubeUrl: 'https://www.youtube.com/watch?v=qqopF_jjHRw',
     mainOrder: 10,
     comment:
       '북측 전면이 좁고, 남측 후면이 넓어서, 방 3개를 모두 남향으로 배치하고, 북향인 거실은 복층 채광창을 통해 자연광이 풍부하게 들어오도록 했습니다.',
@@ -161,6 +166,7 @@ export const residentialProjects = [
   {
     title: 'URBAN ATTIC',
     location: '2022 수성네거리 복층 상가주택',
+    blogUrl: 'https://blog.naver.com/thedesign_ena/223987781016',
     comment:
       '대구은행 본점 앞 도심 뷰를 품은 이 복층 공간은 건축사 부부의 워크 앤 라이프가 조화롭게 이어지는 힐링 아지트입니다. 박공지붕 특유의 입체적인 사선 볼륨을 온전히 드러내고자 벽과 천장을 정갈한 화이트로 비워내고, 바닥에는 짙은 우드를 매치해 묵직한 안정감을 부여했습니다. 4층 메인 다이닝의 우드 루버 포인트와 블랙 펜던트가 드리운 맞춤 작업 테이블, 자작합판 계단판으로 군더더기 없이 연결되는 미니멀한 동선을 지나면 5층 아늑한 다락 침실이 펼쳐집니다. 시원한 천창 채광과 은은한 간접조명이 쏟아지는 박공 침실은 바쁜 일상 속 온전한 쉼을 선사하는 특별한 휴식처입니다.',
     images: [
@@ -187,6 +193,7 @@ export const residentialProjects = [
   {
     title: 'RESTORED NOSTALGIA',
     location: '2021 청도 기와집 올리모델링',
+    youtubeUrl: 'https://www.youtube.com/shorts/Anvng8KvnLs',
     comment:
       '일본 유학 시절의 깊은 향수를 간직한 70대 건축주를 위해 오랜 시간의 결을 현대적인 미감으로 재해석한 단독주택 현장입니다. 세월을 버텨온 기존 고재 기둥과 서까래는 손상된 부위를 정밀하게 구조 보강한 뒤 오일스테인 작업을 거쳐 고유의 숨결로 복원했습니다. 벽면과 천장에는 옹이가 없어 정갈한 최고급 무절 히노끼 루버를 시공하고 강마루를 매치해, 공간 전체에 은은한 편백 향과 자연의 온기를 채웠습니다. 여기에 슬림한 모던 창호와 블랙 프레임 중문, 미니멀하게 라인을 정돈한 주방과 세련된 욕실을 더해 구옥 특유의 고즈넉한 정취 속에서 간결한 고급스러움을 완성했습니다.',
     images: [

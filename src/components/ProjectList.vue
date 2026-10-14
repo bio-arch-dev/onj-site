@@ -71,6 +71,42 @@
           </swiper-slide>
         </swiper>
       </div>
+
+      <!-- 현장 외부 링크 (네이버 블로그 / 유튜브) -->
+      <div
+        v-if="project.blogUrl || project.youtubeUrl"
+        class="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-6"
+      >
+        <!-- 네이버 블로그 링크 -->
+        <a
+          v-if="project.blogUrl"
+          :href="project.blogUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 font-mono text-[11px] text-stone-600 transition-all hover:border-stone-400 hover:bg-stone-100 hover:text-stone-900 sm:text-xs"
+        >
+          <span class="h-1.5 w-1.5 rounded-full bg-[#03C75A]"></span>
+          <span>현장 리뷰(블로그)</span>
+          <span class="material-symbols-outlined text-[13px]"
+            >arrow_outward</span
+          >
+        </a>
+
+        <!-- 유튜브 영상 링크 -->
+        <a
+          v-if="project.youtubeUrl"
+          :href="project.youtubeUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 font-mono text-[11px] text-stone-600 transition-all hover:border-stone-400 hover:bg-stone-100 hover:text-stone-900 sm:text-xs"
+        >
+          <span class="h-1.5 w-1.5 rounded-full bg-[#FF0000]"></span>
+          <span>영상 리뷰(유튜브)</span>
+          <span class="material-symbols-outlined text-[13px]"
+            >arrow_outward</span
+          >
+        </a>
+      </div>
     </div>
 
     <!-- 인스타그램 스타일 라이트박스 모달 -->
