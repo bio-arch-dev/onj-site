@@ -1,11 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
 import { projects } from '@/data/projects'
-import ImageModal from '@/components/ImageModal.vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
+
+// 모달은 클릭 시점에만 불러오도록 지연 로드
+const ImageModal = defineAsyncComponent(
+  () => import('@/components/ImageModal.vue'),
+)
 
 const modules = [Pagination]
 
@@ -26,6 +30,13 @@ const closeModal = () => {
   currentImages.value = []
   currentIndex.value = 0
   document.body.style.overflow = 'auto'
+}
+
+// Cloudinary 썸네일 최적화 함수
+// /upload/ 뒤에 f_auto,q_auto,w_800 파라미터를 주입하여 용량을 90% 이상 절감
+const getOptimizedThumb = (url, width = 800) => {
+  if (!url || !url.includes('cloudinary.com')) return url
+  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width},c_limit/`)
 }
 </script>
 
@@ -70,9 +81,10 @@ const closeModal = () => {
             @click="openModal(project.images, iIdx)"
           >
             <img
-              :src="img"
+              :src="getOptimizedThumb(img, 600)"
               :alt="project.altTexts?.[iIdx] || project.title"
               loading="lazy"
+              decoding="async"
               class="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
             />
           </div>
@@ -95,10 +107,14 @@ const closeModal = () => {
                   @click="openModal(project.images, groupIdx + offset)"
                 >
                   <img
-                    :src="project.images[groupIdx + offset]"
+                    :src="
+                      getOptimizedThumb(project.images[groupIdx + offset], 400)
+                    "
                     :alt="
                       project.altTexts?.[groupIdx + offset] || project.title
                     "
+                    loading="lazy"
+                    decoding="async"
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -107,7 +123,7 @@ const closeModal = () => {
           </swiper>
         </div>
 
-        <!-- 4. 현장 외부 링크 (블로그 / 유튜브) -->
+        <!-- 4. 현장 외부 링크 -->
         <div
           v-if="project.blogUrl || project.youtubeUrl"
           class="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-6"
@@ -143,8 +159,9 @@ const closeModal = () => {
       </div>
     </div>
 
-    <!-- 분리된 모달 컴포넌트 호출 -->
+    <!-- v-if를 걸어 실제 열릴 때만 마운트 및 다운로드 -->
     <ImageModal
+      v-if="isModalOpen"
       :is-open="isModalOpen"
       :images="currentImages"
       v-model:initial-index="currentIndex"
@@ -152,12 +169,3 @@ const closeModal = () => {
     />
   </section>
 </template>
-
-<style scoped>
-.project-swiper {
-  --swiper-theme-color: #943939;
-}
-:deep(.swiper-pagination) {
-  bottom: 0 !important;
-}
-</style>

@@ -28,7 +28,7 @@
               <p>Tel: 053 963 6189</p>
               <p>Phone: 010-3819-6189</p>
               <p class="cursor-pointer transition-colors hover:text-[#943939]">
-                www.onj.kr
+                onj.kr
               </p>
             </div>
           </div>
@@ -49,12 +49,14 @@
               ><br class="md:hidden" />
               <span class="text-gray-400">상호:</span> (주)온재
               <span class="mx-2 text-gray-700">|</span>
+              <span class="text-gray-400">대표자:</span> 이유정
+              <span class="mx-2 text-gray-700">|</span><br class="md:hidden" />
               <span class="text-gray-400">사업자 등록번호:</span> 861-87-02404
             </p>
             <p>
-              <span class="text-gray-400">대표번호:</span> 010-3819-6189
+              <span class="text-gray-400">대표번호:</span> 053-963-6189
               <span class="mx-2 text-gray-700">|</span>
-              <span class="text-gray-400">팩스:</span> 053) 963 6189
+              <span class="text-gray-400">팩스:</span> 053) 962 6189
               <span class="mx-2 text-gray-700">|</span><br class="md:hidden" />
               <span class="text-gray-400">이메일:</span> ylee.onj@gmail.com
             </p>

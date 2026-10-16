@@ -1,11 +1,24 @@
+<script setup>
+const mobileBanner =
+  'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800,c_limit/v1772792717/DSC07162_iehvqt.jpg'
+const desktopBanner =
+  'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_1920,c_limit/v1772792717/DSC07162_iehvqt.jpg'
+</script>
+
 <template>
   <section
     class="relative flex h-[40vh] w-full items-center justify-center overflow-hidden text-white md:h-screen"
   >
     <div class="absolute inset-0 z-0 overflow-hidden">
+      <!-- :src와 :srcset으로 동적 바인딩하여 Vite의 잘못된 import 파싱 방지 -->
       <img
-        src="https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto/v1772792717/DSC07162_iehvqt.jpg"
+        :src="desktopBanner"
+        :srcset="`${mobileBanner} 768w, ${desktopBanner} 1920w`"
+        sizes="100vw"
         alt="병원 클린룸 공사 현장"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
         class="animate-ken-burns h-full w-full origin-center object-cover"
       />
       <div class="absolute inset-0 bg-black/30"></div>
@@ -31,18 +44,17 @@
 </template>
 
 <style scoped>
-/* 3. 몰입형(Ken Burns) 애니메이션 정의 */
 @keyframes ken-burns {
   0% {
-    transform: scale(1); /* 시작: 원래 크기 */
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.5); /* 끝: 15% 확대 (속으로 몰입하는 효과) */
+    transform: scale(1.15);
   }
 }
 
 .animate-ken-burns {
-  /* 애니메이션 이름, 지속 시간(20초로 천천히), 타이밍 함수, 무한 반복, 부드럽게 왕복 */
   animation: ken-burns 20s ease-out infinite alternate;
+  will-change: transform;
 }
 </style>
