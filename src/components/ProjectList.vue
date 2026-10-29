@@ -26,7 +26,7 @@
         </p>
       </div>
 
-      <!-- 데스크톱 그리드 -->
+      <!-- 데스크톱 그리드 (600px 최적화) -->
       <div class="hidden grid-cols-4 gap-3 md:grid">
         <div
           v-for="(img, iIdx) in project.images"
@@ -35,15 +35,16 @@
           @click="openModal(project.images, iIdx)"
         >
           <img
-            :src="img"
+            :src="getOptimizedImage(img, 600)"
             :alt="project.altTexts?.[iIdx] || project.title"
             loading="lazy"
+            decoding="async"
             class="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
       </div>
 
-      <!-- 모바일 스와이퍼 그리드 -->
+      <!-- 모바일 스와이퍼 그리드 (400px 최적화 및 lazy 추가) -->
       <div class="md:hidden">
         <swiper
           :modules="modules"
@@ -59,10 +60,14 @@
                   @click="openModal(project.images, groupIdx + offset)"
                 >
                   <img
-                    :src="project.images[groupIdx + offset]"
+                    :src="
+                      getOptimizedImage(project.images[groupIdx + offset], 400)
+                    "
                     :alt="
                       project.altTexts?.[groupIdx + offset] || project.title
                     "
+                    loading="lazy"
+                    decoding="async"
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -77,7 +82,6 @@
         v-if="project.blogUrl || project.youtubeUrl"
         class="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-6"
       >
-        <!-- 네이버 블로그 링크 -->
         <a
           v-if="project.blogUrl"
           :href="project.blogUrl"
@@ -92,7 +96,6 @@
           >
         </a>
 
-        <!-- 유튜브 영상 링크 -->
         <a
           v-if="project.youtubeUrl"
           :href="project.youtubeUrl"
@@ -170,6 +173,7 @@
           </svg>
         </button>
 
+        <!-- 모달 확대 이미지 (1600px 안전 변환 적용) -->
         <img
           :src="currentLargeImage"
           class="max-h-[85vh] max-w-[90vw] rounded-lg object-contain shadow-2xl transition-all duration-300"
@@ -222,10 +226,20 @@ const isModalOpen = ref(false)
 const currentImages = ref([])
 const currentIndex = ref(0)
 
+// Cloudinary 최적화 공통 유틸 함수
+const getOptimizedImage = (url, width = 800) => {
+  if (!url || !url.includes('cloudinary.com')) return url
+  return url.replace(
+    /\/upload\/(?:.*\/)?(v\d+\/)/,
+    `/upload/f_auto,q_auto,w_${width},c_limit/$1`,
+  )
+}
+
+// 모달 확대 이미지: 기존의 불안정한 문자열 치환 대신 유틸 함수로 1600px 고정 변환
 const currentLargeImage = computed(() => {
   if (!currentImages.value.length) return ''
   const imgUrl = currentImages.value[currentIndex.value] || ''
-  return imgUrl.replace('w_800', 'w_1600')
+  return getOptimizedImage(imgUrl, 1600)
 })
 
 const openModal = (images, index) => {

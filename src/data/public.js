@@ -9,14 +9,14 @@ export const publicProjects = [
     comment:
       '대구동구청소년 상담센터는 해외 오피스를 연상시키는 무드로 완성되었습니다. 청소년들에게는 멋진 공간을, 이곳에서 근무하는 선생님들에게는 자부심을 느낄 수 있는 환경을 제공하고자 했습니다.',
     images: [
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126074/DSC01036_m3jmrh.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126097/DSC01062_zgml7p.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126107/DSC01100_ro413k.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126188/DSC00986_hfwker.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126226/DSC00955_eyqb6r.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126045/DSC01015_espxkr.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126120/DSC01054_dso7rt.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1773126141/DSC01023_uvispu.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126074/DSC01036_m3jmrh.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126097/DSC01062_zgml7p.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126107/DSC01100_ro413k.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126188/DSC00986_hfwker.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126226/DSC00955_eyqb6r.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126045/DSC01015_espxkr.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126120/DSC01054_dso7rt.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1773126141/DSC01023_uvispu.jpg',
     ],
     altTexts: [
       '대구 동구청소년 상담센터 인테리어 완공 - 해외 오피스 감성의 세련된 대기실',

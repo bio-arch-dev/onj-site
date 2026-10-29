@@ -3,18 +3,18 @@ export const medicalProjects = [
     title: 'CHOI CHANG-HYEOK ORTHOPEDIC SURGERY',
     location: '2025 반월당 정형외과 의원',
     blogUrl: 'https://blog.naver.com/thedesign_ena/223841735229',
-    mainOrder: 2, // 메인 화면 2순위 노출
+    mainOrder: 1, // 메인 화면 1순위 노출
     comment:
       '최창혁 정형외과는 우드와 화이트를 중심으로 따뜻하고 편안한 분위기를 강조한 공간입니다. 환자들의 심리적 안정을 최우선으로 설계되었습니다.',
     images: [
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872427/1_seltu6.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872444/3_vfffsu.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872435/9_v1bryl.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872473/4_l2f3sx.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872472/8_cisdi6.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872474/7_jpzh8l.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872473/11_pw7aru.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1772872513/DSC07385_fjxlcd.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872427/1_seltu6.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872444/3_vfffsu.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872435/9_v1bryl.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872473/4_l2f3sx.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872472/8_cisdi6.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872474/7_jpzh8l.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872473/11_pw7aru.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1772872513/DSC07385_fjxlcd.jpg',
     ],
     altTexts: [
       '따뜻한 우드 톤의 병원 대기 공간 디자인 및 가구 배치',
@@ -32,18 +32,18 @@ export const medicalProjects = [
     location: '2026 대구 혁신도시 지음한의원',
     blogUrl: 'https://blog.naver.com/thedesign_ena/224340492013',
     youtubeUrl: 'https://www.youtube.com/watch?v=R_5rifsWw14&t=3s',
-    mainOrder: 1, // 메인 화면 1순위 노출
+    mainOrder: 2,
     comment:
       '지음한의원은 정갈한 화이트와 절제된 오크 포인트를 중심으로 모던하고 신뢰감 있는 분위기를 강조한 공간입니다. 진료의 깊이를 담아내는 차분한 조도와 정밀한 법적 설계를 최우선으로 완성되었습니다.',
     images: [
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095018/YJ_00532_uhzto6.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095076/YJ_00637_ovskok.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095107/YJ_00744-2_tuxgfr.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095251/YJ_00721_y4vh1w.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095178/YJ_00639_wndub3.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095210/YJ_00652_irstif.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095292/YJ_00701_zdekdk.jpg',
-      'https://res.cloudinary.com/dc50dnaqy/image/upload/f_auto,q_auto,w_800/v1784095460/YJ_00619_fk0x2b.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095018/YJ_00532_uhzto6.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095076/YJ_00637_ovskok.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095107/YJ_00744-2_tuxgfr.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095251/YJ_00721_y4vh1w.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095178/YJ_00639_wndub3.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095210/YJ_00652_irstif.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095292/YJ_00701_zdekdk.jpg',
+      'https://res.cloudinary.com/dc50dnaqy/image/upload/v1784095460/YJ_00619_fk0x2b.jpg',
     ],
     altTexts: [
       '깔끔한 화이트 톤과 하단 오크 포인트가 돋보이는 대구한의원인테리어',

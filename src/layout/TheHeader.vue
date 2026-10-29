@@ -13,7 +13,7 @@
         class="group flex shrink-0 cursor-pointer items-center gap-0.5 pl-1 whitespace-nowrap"
         @click="handleLogoClick"
       >
-        <!-- 심볼 그래픽 (기존 대비 0.8배 추가 축소) -->
+        <!-- 심볼 그래픽 -->
         <div
           :class="[
             'origin-left scale-[0.65] transition-colors duration-300 sm:scale-[0.72] md:scale-[0.75]',
@@ -33,7 +33,7 @@
         </span>
       </div>
 
-      <!-- 중앙: 네비게이션 (센터 쪽으로 이동하여 우측 여백 확보) -->
+      <!-- 중앙: 네비게이션 -->
       <nav
         class="flex flex-1 items-center justify-center gap-4 whitespace-nowrap sm:gap-6 md:gap-8"
       >
@@ -67,7 +67,7 @@
             </svg>
           </button>
 
-          <!-- 드롭다운 패널 (버튼 기준 중앙 정렬) -->
+          <!-- 드롭다운 패널 -->
           <Transition name="dropdown-fade">
             <div
               v-if="isDropdownOpen"
@@ -86,7 +86,7 @@
           </Transition>
         </div>
 
-        <!-- 2. 소통 (연그레이) -->
+        <!-- 2. 소통 -->
         <a
           :href="commId"
           @click="scrollToSection($event, commId)"
@@ -95,7 +95,7 @@
           소통
         </a>
 
-        <!-- 3. 문의 (연그레이) -->
+        <!-- 3. 문의 -->
         <a
           :href="contactId"
           @click="scrollToSection($event, contactId)"
@@ -105,7 +105,7 @@
         </a>
       </nav>
 
-      <!-- 우측: 좌측 로고 너비만큼 더미 스페이서를 두어 메뉴가 정확히 중앙에 오도록 균형 유지 -->
+      <!-- 우측 대칭 스페이서 -->
       <div class="hidden w-15 shrink-0 sm:block"></div>
     </div>
   </header>
@@ -129,8 +129,8 @@ const contactId = contactMenu ? contactMenu.id : '#contact'
 
 // 포트폴리오 4대 영역
 const PORTFOLIO_MENUS = [
-  { title: '상업공간', path: '/commercial' },
   { title: '주거공간', path: '/residential' },
+  { title: '상업공간', path: '/commercial' },
   { title: '의료공간', path: '/medical' },
   { title: '관공사', path: '/public' },
 ]
@@ -139,8 +139,16 @@ const isScrolled = ref(false)
 const isDropdownOpen = ref(false)
 const dropdownRef = ref(null)
 
+// 스크롤 최적화 (requestAnimationFrame 사용)
+let ticking = false
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      isScrolled.value = window.scrollY > 50
+      ticking = false
+    })
+    ticking = true
+  }
 }
 
 const toggleDropdown = () => {
@@ -166,7 +174,8 @@ const handleClickOutside = (e) => {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
+  // passive: true 옵션으로 스크롤 성능 향상
+  window.addEventListener('scroll', handleScroll, { passive: true })
   window.addEventListener('click', handleClickOutside)
 })
 
@@ -207,7 +216,7 @@ const moveToElement = (id) => {
   if (target) {
     const headerOffset = 70
     const elementPosition = target.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+    const offsetPosition = elementPosition + window.scrollY - headerOffset
 
     window.scrollTo({
       top: offsetPosition,

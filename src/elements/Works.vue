@@ -18,8 +18,19 @@ const isModalOpen = ref(false)
 const currentImages = ref([])
 const currentIndex = ref(0)
 
+// Cloudinary 최적화 유틸 함수
+// URL에 기존 변환 파라미터가 이미 있어도 정규식으로 안전하게 원하는 규격으로 교체
+const getOptimizedImage = (url, width = 800) => {
+  if (!url || !url.includes('cloudinary.com')) return url
+  return url.replace(
+    /\/upload\/(?:.*\/)?(v\d+\/)/,
+    `/upload/f_auto,q_auto,w_${width},c_limit/$1`,
+  )
+}
+
+// 모달 열 때 1600px 리사이즈 파라미터를 적용하여 원본 고용량 트래픽 누수 차단
 const openModal = (images, index) => {
-  currentImages.value = images
+  currentImages.value = images.map((img) => getOptimizedImage(img, 1600))
   currentIndex.value = index
   isModalOpen.value = true
   document.body.style.overflow = 'hidden'
@@ -30,13 +41,6 @@ const closeModal = () => {
   currentImages.value = []
   currentIndex.value = 0
   document.body.style.overflow = 'auto'
-}
-
-// Cloudinary 썸네일 최적화 함수
-// /upload/ 뒤에 f_auto,q_auto,w_800 파라미터를 주입하여 용량을 90% 이상 절감
-const getOptimizedThumb = (url, width = 800) => {
-  if (!url || !url.includes('cloudinary.com')) return url
-  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width},c_limit/`)
 }
 </script>
 
@@ -72,7 +76,7 @@ const getOptimizedThumb = (url, width = 800) => {
           </p>
         </div>
 
-        <!-- 2. 데스크톱 그리드 -->
+        <!-- 2. 데스크톱 그리드 (600px 최적화) -->
         <div class="hidden grid-cols-4 gap-3 md:grid">
           <div
             v-for="(img, iIdx) in project.images"
@@ -81,7 +85,7 @@ const getOptimizedThumb = (url, width = 800) => {
             @click="openModal(project.images, iIdx)"
           >
             <img
-              :src="getOptimizedThumb(img, 600)"
+              :src="getOptimizedImage(img, 600)"
               :alt="project.altTexts?.[iIdx] || project.title"
               loading="lazy"
               decoding="async"
@@ -90,7 +94,7 @@ const getOptimizedThumb = (url, width = 800) => {
           </div>
         </div>
 
-        <!-- 3. 모바일 스와이퍼 그리드 -->
+        <!-- 3. 모바일 스와이퍼 그리드 (400px 최적화) -->
         <div class="md:hidden">
           <swiper
             :modules="modules"
@@ -108,7 +112,7 @@ const getOptimizedThumb = (url, width = 800) => {
                 >
                   <img
                     :src="
-                      getOptimizedThumb(project.images[groupIdx + offset], 400)
+                      getOptimizedImage(project.images[groupIdx + offset], 400)
                     "
                     :alt="
                       project.altTexts?.[groupIdx + offset] || project.title
@@ -159,7 +163,7 @@ const getOptimizedThumb = (url, width = 800) => {
       </div>
     </div>
 
-    <!-- v-if를 걸어 실제 열릴 때만 마운트 및 다운로드 -->
+    <!-- v-if로 실제 열릴 때만 마운트 및 최적화된 배열 전달 -->
     <ImageModal
       v-if="isModalOpen"
       :is-open="isModalOpen"

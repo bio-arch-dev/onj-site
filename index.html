@@ -5,11 +5,11 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. 외부 CDN 도메인 사전 연결 (DNS 및 SSL 지연 단축) -->
+    <!-- 1. 외부 CDN 도메인 사전 연결 (crossorigin 보완) -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
 
     <!-- 2. 첫 화면 메인 LCP 배너 이미지 조기 로딩 (Preload) -->
     <link
@@ -19,10 +19,10 @@
       fetchpriority="high"
     />
 
-    <!-- 3. SUIT 폰트 CSS -->
+    <!-- 3. SUIT 폰트 CSS (공식 최신 정상 경로로 수정) -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/suit-variable.css"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/suit@2/fonts/variable/woff2/SUIT-Variable.css"
     />
 
     <!-- 4. Material Symbols: 렌더링 블로킹 방지를 위한 비동기 로드 -->
@@ -61,7 +61,7 @@
     <meta name="author" content="온재" />
     <link rel="canonical" href="https://onj.kr" />
 
-    <!-- Open Graph (SNS 공유 이미지 w_1200 최적화 적용) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="온재" />
     <meta
